@@ -1,0 +1,13 @@
+[Unit]
+Description=Klik voor Kamers
+After=multi-user.target
+
+[Service]
+User=<your user>
+WorkingDirectory=<path to>/klikvoorkamers
+ExecStart=<path to>/klikvoorkamers/.venv/bin/python <path to>/klikvoorkamers/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
